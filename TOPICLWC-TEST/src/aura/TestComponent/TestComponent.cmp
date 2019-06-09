@@ -1,6 +1,6 @@
 <!-- Test Component -->
 
-<aura:component>
+<aura:component controller="TestComponentController">
     <aura:attribute name="fNumber" type="decimal" description="" />
     <aura:attribute name="lNumber" type="decimal" description="" />
     <aura:attribute name="result" type="decimal" description="" />
@@ -23,7 +23,7 @@
                 </div>
                 <div class="slds-no-flex">
 
-                    <lightning:button variant="brand" label="Calculate" title="Click here to calculate" onclick="{! c.doCalculate }" />
+                    <lightning:button variant="brand" label="Calculate" title="Click here to calculate" onclick="{!c.doCalculate}" />
                      
                 </div>
             </header>
