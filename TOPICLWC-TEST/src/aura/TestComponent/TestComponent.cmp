@@ -1,3 +1,5 @@
+<!-- Test Component -->
+
 <aura:component>
     
     <article class="slds-card">

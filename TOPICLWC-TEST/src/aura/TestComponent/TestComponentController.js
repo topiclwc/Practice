@@ -1,3 +1,4 @@
+// Controller
 ({
 	handleCalculate : function(component, event, helper) {
 		var fnum = parseInt(component.find("fnum_id").get("v.value"));
