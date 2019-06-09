@@ -1,6 +1,9 @@
 <!-- Test Component -->
 
 <aura:component>
+    <aura:attribute name="fNumber" type="decimal" description="" />
+    <aura:attribute name="lNumber" type="decimal" description="" />
+    <aura:attribute name="result" type="decimal" description="" />
     
     <article class="slds-card">
         <div class="slds-card__header slds-grid">
@@ -20,15 +23,16 @@
                 </div>
                 <div class="slds-no-flex">
 
-                    <lightning:button variant="brand" label="Calculate" title="Click here to calculate" onclick="{! c.handleCalculate }" />
+                    <lightning:button variant="brand" label="Calculate" title="Click here to calculate" onclick="{! c.doCalculate }" />
                      
                 </div>
             </header>
         </div>
         <div class="slds-card__body slds-card__body_inner">
-            <lightning:input type="number" name="input1" label="Enter a number" aura:id="fnum_id"/>
-            <lightning:input type="number" name="input2" label="Enter a number" aura:id="snum_id"/>
-            <lightning:input type="number" name="result" label="Result" aura:id="rnum_id" disabled="true"/>
+            <lightning:input type="number" name="input1" label="Enter a number" value="{!v.fNumber}"  />
+            <lightning:input type="number" name="input2" label="Enter a number" value="{!v.lNumber}"  />
+                        
+            <lightning:input type="number" name="result" label="Result"  value="{!v.result}" disabled="true"/>
         </div>
         
         <footer class="slds-card__footer">
